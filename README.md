@@ -22,7 +22,12 @@
 
 ### Tech Stack
 
-[![Skills](https://skillicons.dev/icons?i=python,pytorch,docker,git,linux,cpp,aws,postgres&theme=dark)](https://nicoloesch.github.io)
+<p align="center">
+  <a href="https://nicoloesch.github.io">
+    <img src="https://skillicons.dev/icons?i=python,pytorch,docker,git,linux,cpp,bash,md,qt,postgres,aws,latex,&theme=dark" />
+  </a>
+</p>
+
 
 ---
 
