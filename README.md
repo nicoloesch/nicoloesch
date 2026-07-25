@@ -33,5 +33,5 @@
 
 ### Stats
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=nicoloesch&show_icons=true&hide_border=true&bg_color=0f1117&title_color=89b4fa&icon_color=89b4fa&text_color=cdd6f4&rank_icon=github" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nicoloesch&layout=compact&hide_border=true&bg_color=0f1117&title_color=89b4fa&text_color=cdd6f4&langs_count=6" />
+<img height="160" src="profile/stats.svg" />
+<img height="160" src="profile/top-langs.svg" />
