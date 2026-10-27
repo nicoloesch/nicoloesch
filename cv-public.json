@@ -1,0 +1,236 @@
+{
+  "basics": {
+    "name": "Nico Loesch",
+    "headline": "Machine Learning Engineer · Clinical NLP, LLMs & Medical Imaging",
+    "location": "Sydney, NSW, Australia",
+    "customFields": [
+      {
+        "text": "LinkedIn",
+        "link": "https://www.linkedin.com/in/nico-loesch"
+      },
+      {
+        "text": "GitHub",
+        "link": "https://www.github.com/nicoloesch"
+      }
+    ]
+  },
+  "summary": {
+    "content": "<p data-resume-whitespace=\"preserve\">Machine learning engineer with a PhD in Computer Science and a background in medical engineering. I build NLP and LLM systems for electronic health records on the OMOP Common Data Model, from ETL and ontology grounding to RAG and agentic AI, and maintain the open-source OMOP tooling behind them. PhD research in medical image segmentation using diffusion models and weak supervision.</p>"
+  },
+  "sections": {
+    "experience": {
+      "items": [
+        {
+          "company": "University of New South Wales",
+          "position": "Senior Project Officer (ML Engineering)",
+          "location": "Sydney, Australia",
+          "period": "Nov 2025 – Present",
+          "description": "<ul><li><p>Develop a scalable ETL pipeline for large-scale EHR analysis that maps clinical records to the OMOP Common Data Model, combining rule-based NLP and LLMs.</p></li><li><p>Built the pipeline's RAG concept-retrieval layer, grounding extracted clinical entities to standard OMOP vocabularies through a virtual knowledge graph and vector store.</p></li><li><p data-resume-whitespace=\"preserve\">Prepared the pipeline's backend for agentic AI, exposing the knowledge graph and vector store as tools for LLM agents via MCP and ACP.</p></li><li><p>Released the core components as open-source libraries (omop-alchemy, omop-graph, omop-emb; see Contributions), with full CI/CD in GitHub Actions.</p></li></ul><p></p>"
+        },
+        {
+          "company": "University of New South Wales",
+          "position": "Research Officer",
+          "location": "Sydney, Australia",
+          "period": "May 2023 – Jan 2025",
+          "description": "<ul><li><p>Fine-tuned and prompt-engineered LLMs to analyse social media text, enabling automated detection of cancer burden.</p></li><li><p>Applied transformer-based language models for semantic analysis, topic modelling and clustering of large-scale social media data.</p></li></ul>"
+        },
+        {
+          "company": "Stryker Leibinger GmbH & Co. KG",
+          "position": "Engineer, Research & Development, Navigated Surgery",
+          "location": "Freiburg, Germany",
+          "period": "Nov 2021 – Jan 2022",
+          "description": "<ul><li><p>Developed software for navigated robotic surgery in an agile team using CI/CD practices.</p></li><li><p>Validated software implementations to ensure reliability and compliance with medical device standards.</p></li></ul>"
+        },
+        {
+          "company": "University of Stuttgart & USE-Ing. GmbH",
+          "position": "Research Assistant",
+          "location": "Stuttgart, Germany",
+          "period": "Apr 2018 – Oct 2021",
+          "description": "<ul><li><p>Developed a labelling GUI for medical image segmentation.</p></li><li><p>Developed real-time control algorithms for robotic arm manipulation, including gaze and head tracking with VR headsets.</p></li></ul>"
+        }
+      ]
+    },
+    "education": {
+      "items": [
+        {
+          "school": "University of Technology Sydney",
+          "degree": "Ph.D.",
+          "area": "Computer Science",
+          "grade": "",
+          "location": "Sydney, Australia",
+          "period": "Mar 2022 – Mar 2026",
+          "description": "<ul><li><p>Weakly-supervised brain tumour segmentation of multi-modal MRI using diffusion models.</p></li><li><p>Multi-disciplinary research in collaboration with the Children’s Hospital at Westmead, Sydney.</p></li><li><p><strong>Thesis</strong>: <em>Towards Robust Clinical Segmentation of Paediatric Brain Tumours in Magnetic Resonance Imaging Using Weakly-supervised Deep Neural Networks</em>, supervised by Prof. Paul Kennedy and Prof. Daniel Catchpoole.</p></li><li><p>Academic tutor for <em>Fundamentals of Data Analytics</em> and <em>Databases</em> (2022–2025).</p></li></ul>"
+        },
+        {
+          "school": "University of Stuttgart",
+          "degree": "M.Sc.",
+          "area": "Medical Engineering",
+          "grade": "1.4/5.0 (High Distinction)",
+          "location": "Stuttgart, Germany",
+          "period": "Oct 2017 – Jun 2021",
+          "description": "<ul><li><p>Erasmus exchange semester at Lund University, Sweden.</p></li><li><p><strong>Thesis</strong>: <em>Efficient Medical Image Segmentation with Graph Neural Networks</em>, supervised by Marc Fischer and Prof. Bin Yang (Grade: 1.3/5.0).</p></li></ul>"
+        },
+        {
+          "school": "Eberhard Karl University of Tübingen",
+          "degree": "B.Sc.",
+          "area": "Medical Engineering",
+          "grade": "1.9/5.0 (First Class Honours)",
+          "location": "Tübingen, Germany",
+          "period": "Oct 2014 – Sep 2017",
+          "description": "<ul><li><p><strong>Thesis</strong>: <em>Development of a Protocol to Quantify Spatially-resolved Magnetic Resonance Spectroscopy in Neurology</em>, supervised by Dr. Andreas Schmid (Grade: 1.6/5.0).</p></li></ul>"
+        }
+      ]
+    },
+    "projects": {
+      "items": [
+        {
+          "name": "omop-graph",
+          "period": "Jan 2026 – Present",
+          "description": "<p><strong>Maintainer.</strong> Built the virtual knowledge graph over the OMOP vocabulary, with embedding integration and a full resolver pipeline for concept retrieval, preparing it for agentic traversal.</p>",
+          "website": {
+            "url": "https://github.com/AustralianCancerDataNetwork/omop-graph"
+          }
+        },
+        {
+          "name": "omop-alchemy",
+          "period": "Jan 2026 – Present",
+          "description": "<p><strong>Maintainer.</strong> Typed SQLAlchemy ORM for the OMOP Common Data Model; delivered performance improvements, schema-aware database handling and DuckDB integration.</p>",
+          "website": {
+            "url": "https://github.com/AustralianCancerDataNetwork/omop-alchemy"
+          }
+        },
+        {
+          "name": "omop-emb",
+          "period": "Apr 2026 – Present",
+          "description": "<p><strong>Maintainer.</strong> Built from the ground up: vector-embedding and RAG store for OMOP concepts with sqlite-vec, pgvector and FAISS backends.</p>",
+          "website": {
+            "url": "https://github.com/AustralianCancerDataNetwork/omop-emb"
+          }
+        },
+        {
+          "name": "TorchIO",
+          "period": "Nov 2022 – Present",
+          "description": "<p><strong>Contributor</strong> to the PyTorch library for 3D medical imaging. Fixed a memory leak in subject copying and a spatial-shape bug in <em>RandomAnisotropy</em>; added inverse support for <em>RescaleIntensity</em> and argument propagation to nested transforms.</p>",
+          "website": {
+            "url": "https://github.com/TorchIO-project/torchio"
+          }
+        }
+      ]
+    },
+    "publications": {
+      "items": [
+        {
+          "title": "Three-Dimensional Latent Diffusion Model for Weakly-Supervised Brain Tumour Segmentation",
+          "publisher": "",
+          "date": "Jun 2025",
+          "description": "<p data-resume-whitespace=\"preserve\"><strong>Loesch, N.</strong>, D. R. Catchpoole, and P. J. Kennedy. In Artificial Intelligence in Medicine, vol. 15734, pp. 242–251. Cham: Springer Nature Switzerland.</p>",
+          "website": {
+            "url": "https://doi.org/10.1007/978-3-031-95838-0_24"
+          }
+        },
+        {
+          "title": "Graph Neural Networks for Brain Tumour Segmentation",
+          "publisher": "",
+          "date": "Dec 2023",
+          "description": "<p data-resume-whitespace=\"preserve\"><strong>Loesch, N.</strong>, and M. Fischer. In Data Driven Science for Clinically Actionable Knowledge in Diseases. Chapman and Hall/CRC.</p>",
+          "website": {
+            "url": "https://doi.org/10.1201/9781003292357-7"
+          }
+        },
+        {
+          "title": "Current State of Radiomics in Pediatric Neuro-Oncology Practice: A Systematic Review",
+          "publisher": "",
+          "date": "Sep 2023",
+          "description": "<p data-resume-whitespace=\"preserve\">Albalkhi, I., A. Bhatia, <strong>N. Lösch</strong>, R. Goetti, and K. Mankad. Pediatric Radiology, vol. 53, no. 10, pp. 2079–2091.</p>",
+          "website": {
+            "url": "https://doi.org/10.1007/s00247-023-05679-6"
+          }
+        },
+        {
+          "title": "Assessment of a Commercial Virtual Reality Controller for Telemanipulation of an Articulated Robotic Arm",
+          "publisher": "",
+          "date": "Nov 2020",
+          "description": "<p data-resume-whitespace=\"preserve\">Schafer, M. B., K. W. Stewart, <strong>N. Lösch</strong>, and P. P. Pott. In 2020 8th IEEE RAS/EMBS International Conference for Biomedical Robotics and Biomechatronics (BioRob), pp. 860–865. New York City, NY, USA: IEEE.</p>",
+          "website": {
+            "url": "https://doi.org/10.1109/biorob49111.2020.9224394"
+          }
+        },
+        {
+          "title": "Telemanipulation of an Articulated Robotic Arm Using a Commercial Virtual Reality Controller",
+          "publisher": "",
+          "date": "Sep 2020",
+          "description": "<p data-resume-whitespace=\"preserve\">Schäfer, M. B., K. W. Stewart, <strong>N. Lösch</strong>, and P. P. Pott. Current Directions in Biomedical Engineering, vol. 6, no. 3, pp. 127–130.</p>",
+          "website": {
+            "url": "https://doi.org/10.1515/cdbme-2020-3033"
+          }
+        }
+      ]
+    }
+  },
+  "customSections": [
+    {
+      "title": "Skills",
+      "type": "skills",
+      "items": [
+        {
+          "name": "Programming languages",
+          "keywords": [
+            "Python",
+            "C++",
+            "SQL"
+          ]
+        },
+        {
+          "name": "Frameworks & Libraries",
+          "keywords": [
+            "Hugging Face Transformers",
+            "NumPy",
+            "pandas",
+            "PyTorch",
+            "PyTorch Lightning",
+            "Qt",
+            "SciPy",
+            "SQLAlchemy"
+          ]
+        },
+        {
+          "name": "AI & Machine Learning",
+          "keywords": [
+            "Agentic AI",
+            "Computer Vision",
+            "Diffusion Models",
+            "Knowledge Graphs",
+            "Large Language Models (LLM)",
+            "Natural Language Processing (NLP)",
+            "Retrieval-augmented Generation (RAG)"
+          ]
+        },
+        {
+          "name": "Technologies & Tools",
+          "keywords": [
+            "Agent Communication Protocol (ACP)",
+            "AWS",
+            "CI/CD",
+            "Docker",
+            "DuckDB",
+            "FAISS",
+            "Git",
+            "GitHub Actions",
+            "Linux",
+            "Model Context Protocol (MCP)",
+            "Ollama",
+            "pgvector",
+            "vLLM"
+          ]
+        },
+        {
+          "name": "Languages",
+          "keywords": [
+            "German (native)",
+            "English (C2)"
+          ]
+        }
+      ]
+    }
+  ]
+}

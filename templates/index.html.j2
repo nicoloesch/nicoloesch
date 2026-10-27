@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ personal.title }}" />
+  <title>{{ personal.name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <nav>
+    <span class="nav-name">{{ personal.name }}</span>
+    <div class="nav-links">
+      <a href="#experience">experience</a>
+      <a href="#education">education</a>
+      <a href="#skills">skills</a>
+      <a href="#publications">publications</a>
+      <a href="#projects">contributions</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>{{ personal.name }}</h1>
+          <p class="hero-role">// {{ personal.title }}{% if personal.address %} &bull; {{ personal.address }}{% endif %}</p>
+          {% if personal.summary_html %}
+          <div class="hero-summary rich-text">{{ personal.summary_html | safe }}</div>
+          {% endif %}
+          {% if personal.contacts %}
+          <div class="contact-links">
+            {% for contact in personal.contacts %}
+            <a href="{{ contact.url }}" target="_blank" rel="noopener noreferrer">{{ contact.text }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <img class="hero-photo" src="assets/photo.jpg" alt="{{ personal.name }}" />
+      </div>
+    </section>
+
+    {% if work %}
+    <section id="experience">
+      <h2><span class="section-marker">//</span> experience</h2>
+      {% for employer in work %}
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-org">{{ employer.employer }}</span>
+          <span class="entry-loc">{{ employer.location }}</span>
+        </div>
+        {% for role in employer.roles %}
+        <div class="role">
+          <div class="role-header">
+            <span class="role-title">{{ role.title }}</span>
+            <span class="role-period">{{ role.period }}</span>
+          </div>
+          <div class="rich-text">{{ role.description_html | safe }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if education %}
+    <section id="education">
+      <h2><span class="section-marker">//</span> education</h2>
+      {% for entry in education %}
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-org">{{ entry.institution }}</span>
+          <span class="entry-loc">{{ entry.location }}</span>
+        </div>
+        <div class="role">
+          <div class="role-header">
+            <span class="role-title">{{ entry.degree }}</span>
+            <span class="role-period">{{ entry.period }}</span>
+          </div>
+          {% if entry.grade %}<p class="edu-grade">{{ entry.grade }}</p>{% endif %}
+          <div class="rich-text">{{ entry.description_html | safe }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if skills %}
+    <section id="skills">
+      <h2><span class="section-marker">//</span> skills</h2>
+      {% for skill in skills %}
+      <div class="skill-row">
+        <span class="skill-cat">{{ skill.category }}</span>
+        <span class="skill-desc">{{ skill.description }}</span>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if publications %}
+    <section id="publications">
+      <h2><span class="section-marker">//</span> publications</h2>
+      {% for pub in publications %}
+      <div class="pub-entry">
+        <div class="pub-meta"><span class="tag">{{ pub.year }}</span></div>
+        <div class="pub-body">
+          {% if pub.url %}<a class="pub-title" href="{{ pub.url }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+          {% else %}<span class="pub-title">{{ pub.title }}</span>{% endif %}
+          {% if pub.publisher %}<div class="pub-venue">{{ pub.publisher }}</div>{% endif %}
+          <div class="pub-authors rich-text">{{ pub.citation_html | safe }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if projects %}
+    <section id="projects">
+      <h2><span class="section-marker">//</span> contributions</h2>
+      <div class="repos-grid">
+        {% for repo in projects %}
+        {% if repo.url %}<a class="repo-card" href="{{ repo.url }}" target="_blank" rel="noopener noreferrer">
+        {% else %}<div class="repo-card">{% endif %}
+          <span class="repo-name">{{ repo.name }}</span>
+          <div class="repo-desc rich-text">{{ repo.description_html | safe }}</div>
+          <div class="repo-meta"><span class="muted">{{ repo.period }}</span></div>
+        {% if repo.url %}</a>{% else %}</div>{% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </main>
+
+  <footer>
+    <p>{{ personal.name }}{% if personal.address %} &bull; {{ personal.address }}{% endif %}
+       &bull; <a href="https://github.com/nicoloesch/nicoloesch" target="_blank" rel="noopener noreferrer">website source</a></p>
+  </footer>
+</body>
+</html>

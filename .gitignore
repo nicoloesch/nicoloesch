@@ -1,0 +1,11 @@
+# A raw Reactive Resume export may contain private details.
+cv.json
+account-export.json
+*.dump
+.env
+__pycache__/
+# Generated website (built by CI).
+web/
+
+# Other files
+.DS_Store
